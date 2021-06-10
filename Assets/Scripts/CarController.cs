@@ -5,7 +5,7 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     public WheelCollider RuedaFrntIzq;
-    public WheelCollider RuedaFrntlDer;
+    public WheelCollider RuedaFrntDer;
     public WheelCollider RuedaTraseraIzq;
     public WheelCollider RuedaTraseraDer;
 
@@ -35,7 +35,7 @@ public class CarController : MonoBehaviour
         if (!frenado)
         {
             RuedaFrntIzq.brakeTorque = 0;
-            RuedaFrntlDer.brakeTorque = 0;
+            RuedaFrntDer.brakeTorque = 0;
             RuedaTraseraIzq.brakeTorque = 0;
             RuedaTraseraDer.brakeTorque = 0;
 
@@ -45,7 +45,7 @@ public class CarController : MonoBehaviour
 
             // CAMBIO EN LA DIRECCION DEL AUTO
             RuedaFrntIzq.steerAngle = anguloGiro * Input.GetAxis("Horizontal");
-            RuedaFrntlDer.steerAngle = anguloGiro * Input.GetAxis("Horizontal");
+            RuedaFrntDer.steerAngle = anguloGiro * Input.GetAxis("Horizontal");
         }
     }
 
@@ -55,7 +55,7 @@ public class CarController : MonoBehaviour
 
         // GIRO DE LAS RUEDAS
         RuedaFrntIzqTransfm.Rotate(RuedaFrntIzq.rpm / 60 * 360 * Time.deltaTime, 0, 0);
-        RuedaFrntDerTransfm.Rotate(RuedaFrntlDer.rpm / 60 * 360 * Time.deltaTime, 0, 0);
+        RuedaFrntDerTransfm.Rotate(RuedaFrntDer.rpm / 60 * 360 * Time.deltaTime, 0, 0);
         RuedaTraseraIzqTransfm.Rotate(RuedaTraseraIzq.rpm / 60 * 360 * Time.deltaTime, 0, 0);
         RuedaTraseraDerTransfm.Rotate(RuedaTraseraDer.rpm / 60 * 360 * Time.deltaTime, 0, 0);
 
@@ -66,8 +66,8 @@ public class CarController : MonoBehaviour
         temp.y = RuedaFrntIzq.steerAngle - RuedaFrntIzqTransfm.localEulerAngles.z;
         RuedaFrntIzqTransfm.localEulerAngles = temp;
 
-        temp1.y = RuedaFrntlDer.steerAngle - RuedaTraseraDerTransfm.localEulerAngles.z;
-        RuedaTraseraDerTransfm.localEulerAngles = temp1;
+        temp1.y = RuedaFrntDer.steerAngle - RuedaFrntDerTransfm.localEulerAngles.z;
+        RuedaFrntDerTransfm.localEulerAngles = temp1;
     }
 
     void FrenoDeMano()
