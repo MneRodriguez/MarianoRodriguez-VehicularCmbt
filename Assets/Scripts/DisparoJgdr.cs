@@ -27,7 +27,7 @@ public class DisparoJgdr : MonoBehaviour
     {
         GameObject balaJgdr = Instantiate(prefabBalaJgdr, ZonaSpawnDelDisparoJgdr.position, ZonaSpawnDelDisparoJgdr.rotation);
         Rigidbody rbBala = balaJgdr.GetComponent<Rigidbody>();
-        rbBala.AddForce(-ZonaSpawnDelDisparoJgdr.position * velDesplzBalaJgdr, ForceMode.Impulse);
+        rbBala.AddForce(ZonaSpawnDelDisparoJgdr.transform.forward * velDesplzBalaJgdr, ForceMode.Impulse);
 
         Destroy(balaJgdr, duracionBala);
     }
