@@ -53,11 +53,11 @@ public class CarController : MonoBehaviour
     {
         FrenoDeMano();
 
-        // GIRO DE LAS RUEDAS
-        RuedaFrntIzqTransfm.Rotate(RuedaFrntIzq.rpm / 60 * 360 * Time.deltaTime, 0, 0);
+        // GIRO DE LAS RUEDAS -- ARREGLAR, HACE QUE GIREN HORIZONTALMENTE Y NO VERTICALMENTE, POR ESO NO PUEDO AVANZAR
+        /*RuedaFrntIzqTransfm.Rotate(RuedaFrntIzq.rpm / 60 * 360 * Time.deltaTime, 0, 0);
         RuedaFrntDerTransfm.Rotate(RuedaFrntDer.rpm / 60 * 360 * Time.deltaTime, 0, 0);
         RuedaTraseraIzqTransfm.Rotate(RuedaTraseraIzq.rpm / 60 * 360 * Time.deltaTime, 0, 0);
-        RuedaTraseraDerTransfm.Rotate(RuedaTraseraDer.rpm / 60 * 360 * Time.deltaTime, 0, 0);
+        RuedaTraseraDerTransfm.Rotate(RuedaTraseraDer.rpm / 60 * 360 * Time.deltaTime, 0, 0);*/
 
         // CAMBIO EN LA DIRECCION DE LAS RUEDAS
         Vector3 temp = RuedaFrntIzqTransfm.localEulerAngles;
