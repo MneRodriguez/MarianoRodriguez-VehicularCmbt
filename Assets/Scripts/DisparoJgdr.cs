@@ -30,5 +30,7 @@ public class DisparoJgdr : MonoBehaviour
         rbBala.AddForce(ZonaSpawnDelDisparoJgdr.transform.forward * velDesplzBalaJgdr, ForceMode.Impulse);
 
         Destroy(balaJgdr, duracionBala);
-    }
+                        
+    }    
+        
 }

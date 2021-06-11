@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class CarController : MonoBehaviour
 {
-        
+    public GameObject AutoJgdr;
+
     public WheelCollider RuedaFrntIzq;
     public WheelCollider RuedaFrntDer;
     public WheelCollider RuedaTraseraIzq;
@@ -26,8 +27,13 @@ public class CarController : MonoBehaviour
     bool frenado = false;
     public Rigidbody rb;
 
+    public GameObject CapsulaPowerUp; // DUPLICA PUNTAJE AL ELIMINAR AUTOS RIVALES
+
     void Start()
     {
+        AutoJgdr = GetComponent<GameObject>();
+        CapsulaPowerUp = GetComponent<GameObject>();
+
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = centroDeMasa.transform.localPosition;
     }
@@ -133,6 +139,11 @@ public class CarController : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemigo"))
         {
             SceneManager.LoadScene("SceneDerrota");
+        }
+
+        if (collision.gameObject.CompareTag("PowerUp"))
+        {
+            ContadorScore.valorScore *= 2;            
         }
     }
 }
