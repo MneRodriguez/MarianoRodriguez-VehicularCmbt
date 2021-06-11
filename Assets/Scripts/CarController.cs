@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class CarController : MonoBehaviour
 {
+    private DisparoJgdr tomarScrptDisparoJugdr; // NECESITO CREAR UNA VAR QUE TOME EL SCRIPT Y SUS MÉTODOS PARA PODER LLAMAR AL 2DO MODO DE DISPARO
+    
     public GameObject AutoJgdr;
 
     public WheelCollider RuedaFrntIzq;
@@ -36,6 +38,9 @@ public class CarController : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = centroDeMasa.transform.localPosition;
+
+        tomarScrptDisparoJugdr = GetComponent<DisparoJgdr>();
+        
     }
 
     /*private void actualizarPosRuedas (WheelCollider ruedaCollider, Transform ruedaTransform)
@@ -143,7 +148,14 @@ public class CarController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("PowerUp"))
         {
-            ContadorScore.valorScore *= 2;            
+            if (Input.GetButtonDown("Fire2"))
+            {
+                tomarScrptDisparoJugdr.Disparar2();
+            }
+
+            Destroy(CapsulaPowerUp);
+            
+            ContadorScore.valorScore += 2;            
         }
     }
 }

@@ -39,6 +39,12 @@ public class IAenems : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.gameObject.CompareTag("Bala2Jugador"))
+        {
+            ContadorScore.valorScore += 2;
+            Destroy(gameObject);
+        }
+
         if (ContadorScore.valorScore == 3)
         {
             SceneManager.LoadScene("SceneVictoria");

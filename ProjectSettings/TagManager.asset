@@ -8,6 +8,7 @@ TagManager:
   - Enemigo
   - BalaJugador
   - PowerUp
+  - Bala2Jugador
   layers:
   - Default
   - TransparentFX

@@ -1466,6 +1466,8 @@ MonoBehaviour:
   ZonaSpawnDelDisparoJgdr: {fileID: 1457018055}
   prefabBalaJgdr: {fileID: 6912125274192147051, guid: 7b340012dd1ac0a478fa755ced470bf0,
     type: 3}
+  prefabBala2Jgdr: {fileID: 2125867457682810969, guid: ef17deb2e8cca11408ecdad9967f5862,
+    type: 3}
   velDesplzBalaJgdr: 20
   duracionBala: 2.5
 --- !u!1 &617039689
