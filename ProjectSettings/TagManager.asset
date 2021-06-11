@@ -6,6 +6,7 @@ TagManager:
   tags:
   - "PlayerCa\xF1on"
   - Enemigo
+  - BalaJugador
   layers:
   - Default
   - TransparentFX
