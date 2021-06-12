@@ -917,6 +917,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enem: {fileID: 294193112}
   rbEnem: {fileID: 294193115}
+  navMeshAgent: {fileID: 294193117}
+  target: {fileID: 609507645}
 --- !u!195 &294193117
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2442,6 +2444,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enem: {fileID: 858523982}
   rbEnem: {fileID: 858523985}
+  navMeshAgent: {fileID: 858523987}
+  target: {fileID: 609507645}
 --- !u!195 &858523987
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3226,6 +3230,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enem: {fileID: 1164471358}
   rbEnem: {fileID: 1164471360}
+  navMeshAgent: {fileID: 1164471363}
+  target: {fileID: 609507645}
 --- !u!65 &1164471362
 BoxCollider:
   m_ObjectHideFlags: 0

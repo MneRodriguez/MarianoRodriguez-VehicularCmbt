@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class IAenems : MonoBehaviour
@@ -8,12 +9,18 @@ public class IAenems : MonoBehaviour
     public GameObject Enem;
     public Rigidbody rbEnem;
 
+    public NavMeshAgent navMeshAgent;
+    public Transform target;
+
     /*public Transform puntoDeDestino;
     Rigidbody rb;
     public float speed = 10.5f;*/
     void Start()
     {
         rbEnem = GetComponent<Rigidbody>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
+
+        InvokeRepeating("SetDestino", 2f, 1f);
 
     }
 
@@ -30,6 +37,11 @@ public class IAenems : MonoBehaviour
         speed = Mathf.Lerp(distancia, 0, Time.deltaTime);
         return Vector3.Normalize(VectorDeDistancia) * speed;
     }*/
+
+    private void SetDestino()
+    {
+        navMeshAgent.destination = target.position;
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
