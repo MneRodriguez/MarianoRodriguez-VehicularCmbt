@@ -31,6 +31,8 @@ public class CarController : MonoBehaviour
 
     public GameObject CapsulaPowerUp; // DUPLICA PUNTAJE AL ELIMINAR AUTOS RIVALES
 
+    
+
     void Start()
     {
         AutoJgdr = GetComponent<GameObject>();
@@ -148,14 +150,17 @@ public class CarController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("PowerUp"))
         {
-            if (Input.GetButtonDown("Fire2"))
+            tomarScrptDisparoJugdr.habilitarDisparoSecundario = true;
+            tomarScrptDisparoJugdr.Disparar2();
+
+            /*if (Input.GetButtonDown("Fire2"))
             {
                 tomarScrptDisparoJugdr.Disparar2();
             }
 
-            Destroy(CapsulaPowerUp);
+            Destroy(CapsulaPowerUp);*/
             
-            ContadorScore.valorScore += 2;            
+            //ContadorScore.valorScore += 2;            
         }
     }
 }

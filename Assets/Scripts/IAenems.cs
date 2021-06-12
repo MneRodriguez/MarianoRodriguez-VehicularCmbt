@@ -45,7 +45,7 @@ public class IAenems : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (ContadorScore.valorScore == 3)
+        if (ContadorScore.valorScore == 3 || ContadorScore.valorScore == 4 || ContadorScore.valorScore == 5 || ContadorScore.valorScore == 6)
         {
             SceneManager.LoadScene("SceneVictoria");
         }

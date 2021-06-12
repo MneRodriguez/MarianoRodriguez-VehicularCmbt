@@ -10,6 +10,8 @@ public class DisparoJgdr : MonoBehaviour
 
     public float velDesplzBalaJgdr = 20f;
     public float duracionBala = 2.5f;
+
+    public bool habilitarDisparoSecundario = false;
     void Start()
     {
         
@@ -23,10 +25,14 @@ public class DisparoJgdr : MonoBehaviour
             Disparar();
         }
 
-        if (Input.GetButtonDown("Fire2"))
+        if (habilitarDisparoSecundario) 
         {
-            Disparar2();
-        }
+            if (Input.GetButtonDown("Fire2"))
+            {
+                Disparar2();
+            }
+
+        } 
     }
 
     void Disparar()
