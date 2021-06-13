@@ -626,14 +626,14 @@ WheelCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145078871}
-  m_Center: {x: -0.0574, y: 0.169, z: 0.055}
+  m_Center: {x: -0.0574, y: 0.074, z: 0.055}
   m_Radius: 0.028
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.1962
-  m_ForceAppPointDistance: 0.3
+  m_ForceAppPointDistance: 0.07
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -1266,7 +1266,6 @@ GameObject:
   - component: {fileID: 441369944}
   - component: {fileID: 441369947}
   - component: {fileID: 441369946}
-  - component: {fileID: 441369945}
   m_Layer: 0
   m_Name: RuedaTrasDer
   m_TagString: Untagged
@@ -1288,20 +1287,6 @@ Transform:
   m_Father: {fileID: 1902005922}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!136 &441369945
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441369943}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &441369946
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1551,9 +1536,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609507641}
   serializedVersion: 2
-  m_Mass: 1000
+  m_Mass: 2000
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2392,7 +2377,6 @@ GameObject:
   - component: {fileID: 855971402}
   - component: {fileID: 855971401}
   - component: {fileID: 855971400}
-  - component: {fileID: 855971399}
   m_Layer: 0
   m_Name: RuedaFrontIzq
   m_TagString: Untagged
@@ -2400,20 +2384,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &855971399
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 855971397}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &855971400
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2605,14 +2575,14 @@ WheelCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903542817}
-  m_Center: {x: -0.0574, y: 0.169, z: 0.054}
+  m_Center: {x: -0.0574, y: 0.074, z: 0.054}
   m_Radius: 0.0306
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.1962
-  m_ForceAppPointDistance: 0.3
+  m_ForceAppPointDistance: 0.07
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -2654,7 +2624,6 @@ GameObject:
   - component: {fileID: 909398589}
   - component: {fileID: 909398592}
   - component: {fileID: 909398591}
-  - component: {fileID: 909398590}
   m_Layer: 0
   m_Name: RuedaFrontDer
   m_TagString: Untagged
@@ -2676,20 +2645,6 @@ Transform:
   m_Father: {fileID: 362043929}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!136 &909398590
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909398588}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &909398591
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2877,7 +2832,7 @@ WheelCollider:
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.1962
-  m_ForceAppPointDistance: 0.3
+  m_ForceAppPointDistance: 0.07
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -4275,7 +4230,7 @@ WheelCollider:
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.1962
-  m_ForceAppPointDistance: 0.3
+  m_ForceAppPointDistance: 0.07
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -4892,7 +4847,6 @@ GameObject:
   - component: {fileID: 1687223668}
   - component: {fileID: 1687223671}
   - component: {fileID: 1687223670}
-  - component: {fileID: 1687223669}
   m_Layer: 0
   m_Name: RuedaTrasIzq
   m_TagString: Untagged
@@ -4914,20 +4868,6 @@ Transform:
   m_Father: {fileID: 1220898778}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!136 &1687223669
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687223667}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1687223670
 MeshRenderer:
   m_ObjectHideFlags: 0
