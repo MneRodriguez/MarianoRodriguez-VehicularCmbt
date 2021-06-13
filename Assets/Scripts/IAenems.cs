@@ -17,7 +17,7 @@ public class IAenems : MonoBehaviour
         rbEnem = GetComponent<Rigidbody>();
         navMeshAgent = GetComponent<NavMeshAgent>();
 
-        InvokeRepeating("SetDestino", 2f, 1f);
+        InvokeRepeating("SetDestino", 2f, 3f);
 
     }
         
