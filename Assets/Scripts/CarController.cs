@@ -7,7 +7,7 @@ public class CarController : MonoBehaviour
 {
     private DisparoJgdr tomarScrptDisparoJugdr; // NECESITO CREAR UNA VAR QUE TOME EL SCRIPT Y SUS MÉTODOS PARA PODER LLAMAR AL 2DO MODO DE DISPARO
     
-    public GameObject AutoJgdr;
+    //public GameObject AutoJgdr;
 
     public WheelCollider RuedaFrntIzq;
     public WheelCollider RuedaFrntDer;
@@ -25,6 +25,7 @@ public class CarController : MonoBehaviour
 
     public Transform centroDeMasa;
 
+    float velMovto = 10.5f;
     float gravedad = 9.8f;
     bool frenado = false;
     public Rigidbody rb;
@@ -35,7 +36,7 @@ public class CarController : MonoBehaviour
 
     void Start()
     {
-        AutoJgdr = GetComponent<GameObject>();
+        //AutoJgdr = GetComponent<GameObject>();
         CapsulaPowerUp = GetComponent<GameObject>();
 
         rb = GetComponent<Rigidbody>();
@@ -72,12 +73,12 @@ public class CarController : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.W))
             {
-                rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * gravedad);
-                rb.AddForce(Vector3.forward * rb.mass);
+                rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * gravedad * velMovto);
+                //rb.AddForce(Vector3.forward * rb.mass);
             }
             if (Input.GetKeyDown(KeyCode.S))
             {
-                rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * -gravedad);
+                rb.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * -gravedad * -velMovto);
             }
 
             Vector3 VelLocal = transform.InverseTransformDirection(rb.velocity);
@@ -151,7 +152,7 @@ public class CarController : MonoBehaviour
         if (collision.gameObject.CompareTag("PowerUp"))
         {
             tomarScrptDisparoJugdr.habilitarDisparoSecundario = true;
-            tomarScrptDisparoJugdr.Disparar2();
+            //tomarScrptDisparoJugdr.Disparar2();
 
             /*if (Input.GetButtonDown("Fire2"))
             {
