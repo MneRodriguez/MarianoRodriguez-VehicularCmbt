@@ -11,10 +11,7 @@ public class IAenems : MonoBehaviour
 
     public NavMeshAgent navMeshAgent;
     public Transform target;
-
-    /*public Transform puntoDeDestino;
-    Rigidbody rb;
-    public float speed = 10.5f;*/
+        
     void Start()
     {
         rbEnem = GetComponent<Rigidbody>();
@@ -23,21 +20,12 @@ public class IAenems : MonoBehaviour
         InvokeRepeating("SetDestino", 2f, 1f);
 
     }
-
-    
+        
     void Update()
     {
-        //rb.AddForce(CalcularVector(), ForceMode.Force);
+        
     }
-
-    /*private Vector3 CalcularVector()
-    {
-        Vector3 VectorDeDistancia = (puntoDeDestino.position - transform.position);
-        float distancia = VectorDeDistancia.magnitude;
-        speed = Mathf.Lerp(distancia, 0, Time.deltaTime);
-        return Vector3.Normalize(VectorDeDistancia) * speed;
-    }*/
-
+    
     private void SetDestino()
     {
         navMeshAgent.destination = target.position;
