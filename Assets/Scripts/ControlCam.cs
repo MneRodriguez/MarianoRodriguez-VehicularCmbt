@@ -26,7 +26,7 @@ public class ControlCam : MonoBehaviour
     private void LateUpdate()
     {
         offset = Quaternion.AngleAxis(Input.GetAxis("Horizontal") * velGiroDeCam, Vector3.up) * offset;
-        transform.position = cañonJgdrParaGiroCam.position + offset;
-        transform.LookAt(cañonJgdrParaGiroCam.position);
+        //transform.position = cañonJgdrParaGiroCam.position + offset;
+        transform.LookAt(cañonJgdrParaGiroCam, Vector3.up);
     }
 }
