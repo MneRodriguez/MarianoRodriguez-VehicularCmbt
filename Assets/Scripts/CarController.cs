@@ -144,7 +144,7 @@ public class CarController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemigo"))
+        if (collision.gameObject.CompareTag("Enemigo") || collision.gameObject.CompareTag("PisoCaerPerder"))
         {
             SceneManager.LoadScene("SceneDerrota");
         }

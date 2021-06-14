@@ -9,6 +9,7 @@ TagManager:
   - BalaJugador
   - PowerUp
   - Bala2Jugador
+  - PisoCaerPerder
   layers:
   - Default
   - TransparentFX
